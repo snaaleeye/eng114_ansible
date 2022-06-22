@@ -48,7 +48,7 @@ Ansible is an IT automation tool. It can configure systems, deploy software, and
 ## What are the key benefits of Ansible?
 
 - Agentless
-- YAML - English like
+- YAML - Python - English-like
 - Modular
 - Efficient
 - Features
@@ -100,3 +100,22 @@ When debating between Terraform vs Ansible, Terraform receives support from Red 
 https://cloudify.co/blog/ansible-vs-terraform/
 
 https://www.linkedin.com/pulse/understanding-terms-infrastructure-code-management-ansible-sangode
+
+## Pull Config or Push Config - Which is more suitable for pull and push?
+
+## How to ssh into different VMs inside a VM
+
+1. Make sure ip used in vagrantfile is compatible with macOS
+
+2. Inside directory with vagrantfile
+`Vagrant up`
+
+3. `Vagrant ssh controller`
+
+4. Inside VM controller
+ssh vagrant@IP in vagrantfile
+e.g. `ssh vagrant@192.xxx.xx.xx`
+
+4. `exit` second VM leads you back to controller VM
+
+5. repeat step 4 with different ip for different VM. 

@@ -168,3 +168,11 @@ YAML = Yet Another Markup Language
 Why YMAL:
 - Used with Ansible - Docker - compose - Kubernetes - Cloud formation etc. 
 - YAML to create PLAYBOOKS
+
+Steps to create YAML playbook
+1. Navigate to `/etc/ansible`
+2. `sudo nano nginx-playbook.yml`
+
+
+3. To run playbook use this command
+`ansible-playbook nginx-playbook.yml`

@@ -119,3 +119,9 @@ e.g. `ssh vagrant@192.xxx.xx.xx`
 4. `exit` second VM leads you back to controller VM
 
 5. repeat step 4 with different ip for different VM. 
+
+
+In the hosts file in ansible we can create autoscaling groups
+
+Inside hosts file enter the below
+

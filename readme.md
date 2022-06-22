@@ -180,3 +180,5 @@ Steps to create YAML playbook
 
 <img width="732" alt="Screenshot 2022-06-22 at 14 55 28" src="https://user-images.githubusercontent.com/105854053/175046834-e8af2902-3249-4acb-9f5a-d42bac2520cf.png">
 
+4. If you have issues with syntax, run these commands
+`ansible-playbook nginx-playbook.yml --syntax-check`

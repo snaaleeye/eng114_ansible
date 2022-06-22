@@ -125,13 +125,19 @@ e.g. `ssh vagrant@192.xxx.xx.xx`
 
 `sudo apt-add-repository ppa:ansible/ansible`
 
+`sudo apt-get install ansible -y`
+
 `sudo apt-get update -y`
 
 6. repeat step 4 and 5 with different ip for different VMs and also install ansible for all. 
 
 7. Navigate to `/etc/ansible`
 
+<img width="457" alt="Screenshot 2022-06-22 at 13 52 23" src="https://user-images.githubusercontent.com/105854053/175033491-8b3d6f1c-7a07-454e-a179-7b033c7b5212.png">
+
 In the hosts file in ansible we can create autoscaling groups
+
+Edit host file with the below information
 
 <img width="618" alt="Screenshot 2022-06-22 at 12 28 18" src="https://user-images.githubusercontent.com/105854053/175018547-c9901be1-f645-4356-93f1-7c6d66feef58.png">
 

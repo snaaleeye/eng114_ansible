@@ -131,5 +131,7 @@ In the hosts file in ansible we can create autoscaling groups
 `ansible web -m ping`
 
 <img width="420" alt="Screenshot 2022-06-22 at 13 39 53" src="https://user-images.githubusercontent.com/105854053/175031122-d4056717-c1ac-49ea-8921-3e17c9b2778c.png">
+
+This message means that you have successfully pinged web.
  
 8. Repeat steps 6 and 7 for different IPs using different VMs such as db in place of web

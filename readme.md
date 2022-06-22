@@ -125,3 +125,6 @@ In the hosts file in ansible we can create autoscaling groups
 
 Inside hosts file enter the below
 
+<img width="618" alt="Screenshot 2022-06-22 at 12 28 18" src="https://user-images.githubusercontent.com/105854053/175018547-c9901be1-f645-4356-93f1-7c6d66feef58.png">
+
+

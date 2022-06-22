@@ -141,10 +141,30 @@ Edit host file with the below information
 <img width="618" alt="Screenshot 2022-06-22 at 12 28 18" src="https://user-images.githubusercontent.com/105854053/175018547-c9901be1-f645-4356-93f1-7c6d66feef58.png">
 
 9. After editing the hosts file, enter this command
-`ansible web -m ping`
+`ansible web -m ping` for single VM
+`ansible all -m ping` - for all
 
 <img width="420" alt="Screenshot 2022-06-22 at 13 39 53" src="https://user-images.githubusercontent.com/105854053/175031122-d4056717-c1ac-49ea-8921-3e17c9b2778c.png">
 
 This message means that you have successfully pinged web.
  
 10. Repeat steps 6 and 7 for different IPs using different VMs such as db in place of web
+
+To search other VMs inside the controller vm use this command:
+`uname -a`
+`ansible web -a "uname -a"`
+`ansible web -a "date"`
+`ansible web -a "free"`
+`ansible web -a "ls -a"` 
+
+Ad-hoc commands
+`ansible <group> -m copy -a “src=home/ansible dest=/tmo/home”`
+
+https://intellipaat.com/blog/tutorial/devops-tutorial/ansible-basic-cheat-sheet/
+
+# YMAL
+YAML = Yet Another Markup Language
+
+Why YMAL:
+- Used with Ansible - Docker - compose - Kubernetes - Cloud formation etc. 
+- YAML to create PLAYBOOKS

@@ -173,6 +173,10 @@ Steps to create YAML playbook
 1. Navigate to `/etc/ansible`
 2. `sudo nano nginx-playbook.yml`
 
+<img width="430" alt="Screenshot 2022-06-22 at 14 55 03" src="https://user-images.githubusercontent.com/105854053/175046720-dcb10b33-b7a6-412b-973b-b26463c5b58b.png">
 
 3. To run playbook use this command
 `ansible-playbook nginx-playbook.yml`
+
+<img width="732" alt="Screenshot 2022-06-22 at 14 55 28" src="https://user-images.githubusercontent.com/105854053/175046834-e8af2902-3249-4acb-9f5a-d42bac2520cf.png">
+

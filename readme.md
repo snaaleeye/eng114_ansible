@@ -25,7 +25,7 @@ Infrastructure as code (IaC) means to manage your IT infrastructure using config
 
 ## What is configuration management and orchestration under IaC
 
- Configuration Management
+- Configuration Management
 
 Config Management is part of provisioning. Basically, that’s using a tool like Chef, Puppet or Ansible to configure our server. “Provisioning” often implies it’s the first time we do it. Config management usually happens repeatedly.
 
@@ -47,10 +47,45 @@ Ansible is an IT automation tool. It can configure systems, deploy software, and
 
 ## What are the key benefits of Ansible?
 
+- Agentless
+- YAML - English like
+- Modular
+- Efficient
+- Features
+- Secure and Consistent
+- Reliable
+- Performance
+- Low overhead
+- Ease of use
+
+
 ## How does IaC - Ansible - Terraform fit into DevOps
 
 ![1595226778983](https://user-images.githubusercontent.com/105854053/175003549-56a851d5-6145-4de3-a541-afd14995054c.jpeg)
 
 
+Ansible DevOps
+
+- The feedback loop is accelerated at a faster rate
+
+- The bugs are found sooner and not wait till the end
+
+- Risk due to lack of sufficient knowledge is mitigated
+
+- The deployments are reliable
+
+- The IT infrastructure is coordinated
+
+- The deployments are faster
+Need for automation
+
+- Version control and configuration management
+
+- Orchestration of the IT Infrastructure.
+
 ## How does it benefit the business?
 
+- Cost reduction
+- Scalability and availability
+- Monitoring and performance visibility
+- Consistency 

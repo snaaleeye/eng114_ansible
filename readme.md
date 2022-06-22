@@ -61,6 +61,10 @@ Ansible is an IT automation tool. It can configure systems, deploy software, and
 
 ## How does IaC - Ansible - Terraform fit into DevOps
 
+What is Terraform?
+
+Terraform is ideal for creating, managing, and improving infrastructure. It involves an open-source code responsible for pushing APIs into configuration files. Terraform appears to be a strong contender in the battle of Terraform Vs. Ansible due to some unique advantages.
+
 ![1595226778983](https://user-images.githubusercontent.com/105854053/175003549-56a851d5-6145-4de3-a541-afd14995054c.jpeg)
 
 
@@ -83,9 +87,16 @@ Need for automation
 
 - Orchestration of the IT Infrastructure.
 
+When debating between Terraform vs Ansible, Terraform receives support from Red Hat. It’s administered as a tool on AWS for orchestration and includes Packer for addressing the automation tasks. Terraform as an infrastructure provisioning tool communicates with VMware, AWS, GCP, and ensures infrastructure deployment.
+
+
 ## How does it benefit the business?
 
 - Cost reduction
 - Scalability and availability
 - Monitoring and performance visibility
 - Consistency 
+
+https://cloudify.co/blog/ansible-vs-terraform/
+
+https://www.linkedin.com/pulse/understanding-terms-infrastructure-code-management-ansible-sangode

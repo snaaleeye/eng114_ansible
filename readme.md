@@ -118,12 +118,20 @@ e.g. `ssh vagrant@192.xxx.xx.xx`
 
 4. `exit` second VM leads you back to controller VM
 
-5. repeat step 4 with different ip for different VM. 
 
+5. Once you are able to ssh into different VMs from within controller Install ansible using these commdands
+
+`sudo apt-get install software-properties-common`
+
+`sudo apt-add-repository ppa:ansible/ansible`
+
+`sudo apt-get update -y`
+
+6. repeat step 4 and 5 with different ip for different VMs and also install ansible for all. 
+
+7. Navigate to `/etc/ansible`
 
 In the hosts file in ansible we can create autoscaling groups
-
-6. Inside hosts file enter the below
 
 <img width="618" alt="Screenshot 2022-06-22 at 12 28 18" src="https://user-images.githubusercontent.com/105854053/175018547-c9901be1-f645-4356-93f1-7c6d66feef58.png">
 

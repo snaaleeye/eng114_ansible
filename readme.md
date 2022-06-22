@@ -128,8 +128,8 @@ In the hosts file in ansible we can create autoscaling groups
 <img width="618" alt="Screenshot 2022-06-22 at 12 28 18" src="https://user-images.githubusercontent.com/105854053/175018547-c9901be1-f645-4356-93f1-7c6d66feef58.png">
 
 7. After editing the hosts file, enter this command
-`ansible db -m ping`
+`ansible web -m ping`
 
 <img width="420" alt="Screenshot 2022-06-22 at 13 39 53" src="https://user-images.githubusercontent.com/105854053/175031122-d4056717-c1ac-49ea-8921-3e17c9b2778c.png">
  
-8. Repeat steps 6 and 7 for different IPs using different VMs such as db
+8. Repeat steps 6 and 7 for different IPs using different VMs such as db in place of web

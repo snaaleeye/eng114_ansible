@@ -51,6 +51,7 @@ Ansible is an IT automation tool. It can configure systems, deploy software, and
 
 ## How does IaC - Ansible - Terraform fit into DevOps
 
+![1595226778983](https://user-images.githubusercontent.com/105854053/175003549-56a851d5-6145-4de3-a541-afd14995054c.jpeg)
 
 
 ## How does it benefit the business?

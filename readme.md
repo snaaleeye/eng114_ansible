@@ -116,10 +116,9 @@ https://www.linkedin.com/pulse/understanding-terms-infrastructure-code-managemen
 ssh vagrant@IP in vagrantfile
 e.g. `ssh vagrant@192.xxx.xx.xx`
 
-4. `exit` second VM leads you back to controller VM
+5. `exit` second VM leads you back to controller VM
 
-
-5. Once you are able to ssh into different VMs from within controller Install ansible using these commdands
+6. Once you are able to ssh into different VMs from within controller Install ansible using these commdands
 
 `sudo apt-get install software-properties-common`
 
@@ -129,9 +128,9 @@ e.g. `ssh vagrant@192.xxx.xx.xx`
 
 `sudo apt-get update -y`
 
-6. repeat step 4 and 5 with different ip for different VMs and also install ansible for all. 
+7. repeat step 4 and 5 with different ip for different VMs and also install ansible for all. 
 
-7. Navigate to `/etc/ansible`
+8. Navigate to `/etc/ansible`
 
 <img width="457" alt="Screenshot 2022-06-22 at 13 52 23" src="https://user-images.githubusercontent.com/105854053/175033491-8b3d6f1c-7a07-454e-a179-7b033c7b5212.png">
 
@@ -141,11 +140,11 @@ Edit host file with the below information
 
 <img width="618" alt="Screenshot 2022-06-22 at 12 28 18" src="https://user-images.githubusercontent.com/105854053/175018547-c9901be1-f645-4356-93f1-7c6d66feef58.png">
 
-7. After editing the hosts file, enter this command
+9. After editing the hosts file, enter this command
 `ansible web -m ping`
 
 <img width="420" alt="Screenshot 2022-06-22 at 13 39 53" src="https://user-images.githubusercontent.com/105854053/175031122-d4056717-c1ac-49ea-8921-3e17c9b2778c.png">
 
 This message means that you have successfully pinged web.
  
-8. Repeat steps 6 and 7 for different IPs using different VMs such as db in place of web
+10. Repeat steps 6 and 7 for different IPs using different VMs such as db in place of web

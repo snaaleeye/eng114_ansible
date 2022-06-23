@@ -198,3 +198,19 @@ This should be the outcome if all the steps were followed.
 
 3. Input the private ip and it should show the app running correctly.  
 <img width="711" alt="Screenshot 2022-06-22 at 18 13 01" src="https://user-images.githubusercontent.com/105854053/175097636-3cb1d935-7869-4cc9-a18a-2d802a54db1b.png">
+
+## How to install MongoDB
+
+1. Navigate to `etc/ansible` and create a playbook
+
+<img width="479" alt="Screenshot 2022-06-23 at 14 25 36" src="https://user-images.githubusercontent.com/105854053/175309870-4bbbc387-9d91-4650-8a52-027460c231e5.png">
+
+2. Use this command `ansible-playbook install_db.yml`
+
+<img width="711" alt="Screenshot 2022-06-23 at 14 28 13" src="https://user-images.githubusercontent.com/105854053/175310382-269b6a8d-275a-4e3d-9a87-9e21866a310d.png">
+
+3. Enter the ip and this should come up
+<img width="953" alt="Screenshot 2022-06-23 at 14 28 46" src="https://user-images.githubusercontent.com/105854053/175310551-62f3063c-e850-4e60-9ee3-5f4481a90480.png">
+
+
+

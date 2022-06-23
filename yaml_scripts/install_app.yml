@@ -36,16 +36,9 @@
     service: name=nginx state=restarted enabled=yes
 
 
-  - name: set up app
-    shell: |
-      cd /home/vagrant/
-      echo "export DB_HOST=192.168.56.20:27017" >> .bashrc
-      source .bashrc
-      cd /home/vagrant/repo/app/app
-      npm install
-      node seeds/seed.js
-      pm2 kill
-      pm2 start app.js
-    become_user: root
+  - name: Add mongodb env var
+    shell: source /home/vagrant/.bashrc && echo export DB_HOST=mongodb://192.168.56.15:27017/posts >> /home/vagrant/.bashrc
+    args:
+      executable: /bin/bash
 
 

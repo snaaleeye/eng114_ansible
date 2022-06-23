@@ -209,7 +209,18 @@ This should be the outcome if all the steps were followed.
 
 <img width="711" alt="Screenshot 2022-06-23 at 14 28 13" src="https://user-images.githubusercontent.com/105854053/175310382-269b6a8d-275a-4e3d-9a87-9e21866a310d.png">
 
-3. Enter the ip and this should come up
+3. Edit web app playbook to include the db ip env variable
+
+<img width="868" alt="Screenshot 2022-06-23 at 15 55 37" src="https://user-images.githubusercontent.com/105854053/175329587-d1cd7ebc-8111-4879-af3d-5d213df54a66.png">
+
+4. Use this command `ansible-playbook install_app.yml`
+
+<img width="772" alt="Screenshot 2022-06-23 at 15 54 54" src="https://user-images.githubusercontent.com/105854053/175329420-5bc93f24-65be-40c0-ae18-754d50189064.png">
+
+
+5. ssh into vagrant web and npm start -d
+
+6. Enter the ip and this should come up
 <img width="953" alt="Screenshot 2022-06-23 at 14 28 46" src="https://user-images.githubusercontent.com/105854053/175310551-62f3063c-e850-4e60-9ee3-5f4481a90480.png">
 
 

@@ -182,3 +182,19 @@ Steps to create YAML playbook
 
 4. If you have issues with syntax, run these commands
 `ansible-playbook nginx-playbook.yml --syntax-check`
+
+This should be the outcome if all the steps were followed. 
+![nginx-welcome-page](https://user-images.githubusercontent.com/105854053/175096869-70b2e368-620e-46c8-985e-1238b35aab4e.png)
+
+## Create a yaml playbook to run app + reverse proxy
+
+1. Navigate to `ect/ansible` and create a new playbook. 
+
+<img width="469" alt="Screenshot 2022-06-22 at 18 10 08" src="https://user-images.githubusercontent.com/105854053/175097123-80c653b8-88b0-4cbc-82c1-2faafccf97d1.png">
+
+2. Run this command `ansible-playbook install_app.yml`
+
+<img width="1033" alt="Screenshot 2022-06-22 at 18 12 20" src="https://user-images.githubusercontent.com/105854053/175097513-ff43776f-0cc5-44d1-835a-721ef7f2eb8e.png">
+
+3. Input the private ip and it should show the app running correctly.  
+<img width="711" alt="Screenshot 2022-06-22 at 18 13 01" src="https://user-images.githubusercontent.com/105854053/175097636-3cb1d935-7869-4cc9-a18a-2d802a54db1b.png">

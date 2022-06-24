@@ -224,4 +224,106 @@ This should be the outcome if all the steps were followed.
 <img width="953" alt="Screenshot 2022-06-23 at 14 28 46" src="https://user-images.githubusercontent.com/105854053/175310551-62f3063c-e850-4e60-9ee3-5f4481a90480.png">
 
 
+## Task
 
+- Controller is working
+- Create a server on AWS using Ansible controller with PLAYBOOK/S
+- AWS access & secrey keys - awscii - s3
+- Ansible VAULT
+- copy the key/file to  ~/.ssh folder - file.pem - eng114.pem
+- create an ssh connection from controller to AWS ec2 - 
+- generate a new ssh key pair in the controller - eng114 - eng114.pub 
+- To test this you ssh into your ec2 from ansible controller other option is ping - both confirm response
+3
+- EC2 public ip inside host file 2:04 - 11:00
+- `sudo ansible aws -m ping --ask-vault-pass` This is setting up two factor authentication to confirm connection with EC2 
+- playbook that can launch ec2 
+
+copy ssh link on aws and paste it inside vagrant@controller with sudo command
+
+inside controller I need
+eng114
+eng114.pem
+eng114.pub
+known_hosts
+
+cd /etc/ansible/group_vars/all
+sudo nano pass.yml
+sudo ansible-vault create pass.yml
+aws_access_key:
+aws_secret_key:
+cat pass.yml
+
+## Task to launch ec2 using ansible
+
+Step 1: 
+
+
+Install dependencies 
+```
+sudo apt-get update
+sudo apt-get
+install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install ansible
+sudo apt-get install tree
+
+```
+
+Install python
+
+```
+
+sudo apt install python
+sudo apt install python-pip -y
+sudo pip install --upgrade pip
+sudo pip install boto
+sudo pip install botocore
+sudo pip install boto3
+
+```
+
+Step 2: Use standard settings
+
+SSH into controller
+
+Edit `cd /etc/ansible/hosts`
+
+
+
+Step 3:
+
+a) Create directory /etc/ansible/group_vars/all
+
+b) Sudo ansible-vault create pass.yml
+    - i to go to insert mode
+aws_access_key: <ACCESS KEY>
+aws_secret_key: <SECRET KEY>
+- esc, :wq!
+
+c) sudo cat pass.yml
+
+d) sudo chmod 666 pass.yml
+
+step 3: 
+
+a) cd ~/.ssh
+
+b)sudo nano eng114.pem
+- past eng114.pem key content from localhost
+
+c) sudo chmod 400 eng114.pem
+
+d) ssh-keygen -t ed25519 -C "@gmail.com"
+
+
+Step 4: Create ansible playbook launch_ec2.yml
+
+Step 5: `ansible-playbook playbook.yml --ask-vault-pass`
+
+Step 6: `ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2`
+
+Step 7: Get public DNS
+
+Step 8: ssh into EC2 instance

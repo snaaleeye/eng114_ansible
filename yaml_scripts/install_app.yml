@@ -37,7 +37,8 @@
 
 
   - name: Add mongodb env var
-    shell: source /home/vagrant/.bashrc && echo export DB_HOST=mongodb://192.168.56.15:27017/posts >> /home/vagrant/.bashrc
+    shell: source /home/vagrant/.bashrc && echo export 
+DB_HOST=mongodb://192.168.56.20:27017/posts >> /home/vagrant/.bashrc
     args:
       executable: /bin/bash
 

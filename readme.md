@@ -330,4 +330,5 @@ Step 8: ssh into EC2 instance
 
 ## Hybrid Architecture Diagram
 
-![Untitled](https://user-images.githubusercontent.com/105854053/175944112-90770cf9-7392-4969-8414-c80af3d3d998.jpg)
+![Untitled (1)](https://user-images.githubusercontent.com/105854053/175946131-d70c6ce3-ea31-45e3-af26-0a5fc2028f23.jpg)
+

@@ -327,3 +327,7 @@ Step 6: `ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2`
 Step 7: Get public DNS
 
 Step 8: ssh into EC2 instance
+
+## Hybrid Architecture Diagram
+
+![Untitled](https://user-images.githubusercontent.com/105854053/175944112-90770cf9-7392-4969-8414-c80af3d3d998.jpg)

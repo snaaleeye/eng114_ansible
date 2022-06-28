@@ -8,7 +8,7 @@
     key_name: eng114_sharmake2
     region: eu-west-1
     image:  ami-07b63aa1cfd3bc3a5
-    id: "eng114-sharmake-ansible-controller"
+    id: "eng114-sharmake-ansible-app"
     sec_group: "sg-00393f7ea539e68ce"
     subnet_id: "subnet-0394b6a9ac2220834"
 # add the following line if ansible by default uses python 2.7
@@ -53,6 +53,6 @@
           wait: true
           count: 1
           instance_tags:
-            Name: eng114-sharmake-controller
+            Name: eng114-sharmake-app
 
       tags: ['never', 'create_ec2']

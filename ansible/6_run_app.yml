@@ -1,0 +1,17 @@
+
+---
+- hosts: app
+  gather_facts: yes
+  become: true
+
+  # Adding environment variable to app
+  # Run Node App
+  tasks:
+  - name: Starting the app
+    shell: |
+      cd /eng114_dev_ops/app/app
+      npm i
+      node seeds/seed.js
+      npm start
+    environment:
+      DB_HOST: mongodb://10.0.9.25:27017/posts

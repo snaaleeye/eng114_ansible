@@ -1,0 +1,12 @@
+---
+- hosts: app
+  gather_facts: yes
+  become: true
+
+  #install nodejs and npm
+  tasks:
+  - name: Install Node
+    apt: pkg=nodejs state=present
+  - name: Install NPM
+    apt: pkg=npm state=present
+

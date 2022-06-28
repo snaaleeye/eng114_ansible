@@ -8,7 +8,7 @@
   vars:
     key_name: shazid-jenkins-server
     region: eu-west-1
-    image: ami-0729e439b6769d6ab
+    image: ami-07b63aa1cfd3bc3a5
     id: "eng114-sharmake-ansible"
     sec_group: "{{ id }}-sec"
 

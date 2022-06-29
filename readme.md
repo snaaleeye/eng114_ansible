@@ -333,3 +333,20 @@ Step 8: ssh into EC2 instance
 ![Untitled (2)](https://user-images.githubusercontent.com/105854053/175952763-e6788651-99c9-49a6-af1c-c755deb4b0b0.jpg)
 
 
+## Ansible Server Drift 
+
+Configuration Drift/Server Drift is the phenomenon where running servers in an infrastructure become more and more different as time goes on, due to manual ad-hoc changes and updates, and general entropy.
+ 
+There are two main methods to combat configuration drift. One is to use automated configuration tools such as Puppet or Chef, and run them frequently and repeatedly to keep machines in line. The other is to rebuild machine instances frequently, so that they don’t have much time to drift from the baseline.
+
+The challenge with automated configuration tools is that they only manage a subset of a machine’s state. Writing and maintaining manifests/recipes/scripts is time consuming, so most teams tend to focus their efforts on automating the most important areas of the system, leaving fairly large gaps.
+
+There are diminishing returns for trying to close these gaps, where you end up spending inordinate amounts of effort to nail down parts of the system that don’t change very often, and don’t matter very much day to day.
+
+On the other hand, if you rebuild machines frequently enough, you don’t need to worry about running configuration updates after provisioning happens. However, this may increase the burden of fairly trivial changes, such as tweaking a web server configuration.
+
+In practice, most infrastructures are probably best off using a combination of these methods. Use automated configuration, continuously updated, for the areas of machine configuration where it gives the most benefit, and also ensure that machines are rebuilt frequently.
+
+The frequency of rebuilds will vary depending on the nature of the services provided and the infrastructure implementation, and may even vary for different types of machines. For example, machines that provide network services such as DNS may be rebuilt weekly, while those which handle batch processing tasks may be rebuilt on demand.
+ 
+ https://dzone.com/articles/configuration-drift

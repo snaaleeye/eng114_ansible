@@ -16,6 +16,13 @@
       debug:
         msg: "OS of machine is {{ ansible_os_family }}"
 
+    - name: "Check if NGINX is installed"
+      package_facts:
+        manager: "auto"
+
+    - name: confirm nginx is installed
+      assert:
+        that: "'nginx' in ansible_facts.packages"
 
     - name: update if debian
       ansible.builtin.command: apt update -y

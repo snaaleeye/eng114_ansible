@@ -350,3 +350,62 @@ In practice, most infrastructures are probably best off using a combination of t
 The frequency of rebuilds will vary depending on the nature of the services provided and the infrastructure implementation, and may even vary for different types of machines. For example, machines that provide network services such as DNS may be rebuilt weekly, while those which handle batch processing tasks may be rebuilt on demand.
  
  https://dzone.com/articles/configuration-drift
+
+ ```
+ 
+ ---
+- name: tests
+  hosts: app
+  become: yes
+  gather_facts: yes #gather machine facts and puts it in a variable called ansible_facts
+  tasks:
+    - name: store date output for timezone check
+      command: date
+      register: tstamp
+
+    - name: Timezone # Checks timezone
+      debug:
+        msg: "Machine timezone is {{ ansible_date_time.tz }}"
+
+    - name: OS #Checks OS  # Checks OS
+      debug:
+        msg: "OS of machine is {{ ansible_os_family }}"
+        
+    - name: "Grab all the packages in machine" # Test Name 
+      package_facts:
+        manager: "auto" # Grabs all the packages in that machine
+        
+    - name: "Check if NGINX is installed" # Test name
+      package_facts:
+        manager: "auto"
+
+    - name: confirm nginx is installed # Test name
+      assert:
+        that: "'nginx' in ansible_facts.packages"
+
+    - name: update if debian # Test to update debian if the OS is debian
+      ansible.builtin.command: apt update -y
+      when: ansible_facts['os_family'] == "Debian"
+
+
+    - name: update if Centos # Test to Update CentOS if the OS is CentOS
+      ansible.builtin.command: yum check-update
+      when: ansible_facts['os_family'] == "Centos"
+
+    - name: Check if port 80 is listening
+      shell: lsof -i -P -n | grep LISTEN
+      register: port_check_80
+
+    - name: confirm port 80 is listening
+      assert:
+        that: "'*:80 (LISTEN)' in port_check_80.stdout"
+
+   - name: Check if port 3000 is listening
+      shell: lsof -i -P -n | grep LISTEN
+      register: port_check_3000
+
+    - name: confirm port 3000 is listening
+      assert:
+        that: "'*:3000 (LISTEN)' in port_check_3000.stdout"
+ 
+ ```

@@ -28,7 +28,7 @@
       assert:
         that: "'nginx' in ansible_facts.packages"
 
-    - name: update if debian # This updates debian if 
+    - name: update if debian # Test to update debian if the OS is debian
       ansible.builtin.command: apt update -y
       when: ansible_facts['os_family'] == "Debian"
 
@@ -36,11 +36,6 @@
     - name: update if Centos # Test to Update CentOS if the OS is CentOS
       ansible.builtin.command: yum check-update
       when: ansible_facts['os_family'] == "Centos"
-
-
-#    - name:
-#      debug:
-#        msg: "{{ inventory_hostname }}"
 
     - name: Check if port 80 is listening
       shell: lsof -i -P -n | grep LISTEN

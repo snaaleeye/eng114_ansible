@@ -8,7 +8,7 @@
     ansible_python_interpreter: /usr/bin/python3
   tasks:
 
-  # This runs a test to check to if UTC is the same as the machines timezone
+  # This checks if UTC is the same as the machines timezone
   - name: Check timezone
     assert:
       that: "'UTC' in ansible_date_time.tz" # This checks if UTC is the same as the machines timezone

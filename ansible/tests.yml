@@ -2,34 +2,38 @@
 - name: tests
   hosts: app
   become: yes
-  gather_facts: yes
+  gather_facts: yes #gather machine facts and puts it in a variable called ansible_facts
   tasks:
     - name: store date output for timezone check
       command: date
       register: tstamp
 
-    - name: Timezone
+    - name: Timezone # Checks timezone
       debug:
         msg: "Machine timezone is {{ ansible_date_time.tz }}"
 
-    - name: OS
+    - name: OS #Checks OS  # Checks OS
       debug:
         msg: "OS of machine is {{ ansible_os_family }}"
-
-    - name: "Check if NGINX is installed"
+        
+    - name: "Grab all the packages in machine" # Test Name 
+      package_facts:
+        manager: "auto" # Grabs all the packages in that machine
+        
+    - name: "Check if NGINX is installed" # Test name
       package_facts:
         manager: "auto"
 
-    - name: confirm nginx is installed
+    - name: confirm nginx is installed # Test name
       assert:
         that: "'nginx' in ansible_facts.packages"
 
-    - name: update if debian
+    - name: update if debian # This updates debian if 
       ansible.builtin.command: apt update -y
       when: ansible_facts['os_family'] == "Debian"
 
 
-    - name: update if Centos
+    - name: update if Centos # Test to Update CentOS if the OS is CentOS
       ansible.builtin.command: yum check-update
       when: ansible_facts['os_family'] == "Centos"
 

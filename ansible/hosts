@@ -1,17 +1,11 @@
-[localhost]
-localhost
 
-[web]
-192.168.56.15 ansible_connection=ssh ansible_ssh_user=vagrant 
-ansible_ssh_pass=vagrant
+#[localhost]
+#localhost
 
-[aws]
+[app]
 
-ec2-instance ansible_host=192.168.56.10 ansible_user=ubuntu 
-ansible_ssh_private_key_file=~/.ssh/shazid-jenkins-server.pem
-
+ec2-instance_app ansible_host=54.72.101.57 ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/eng114_sharmake2.pem
 
 [db]
-192.168.56.20 ansible_connection=ssh ansible_ssh_user=vagrant 
-ansible_ssh_pass=vagrant
 
+ec2-instance_db ansible_host=10.0.9.25 ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/eng114_sharmake2.pem

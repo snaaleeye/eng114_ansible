@@ -332,15 +332,57 @@ Step 7: Get public DNS
 
 Step 8: ssh into EC2 instance
  
-## Hybrid Architecture Diagram
+
+ 
+## Migrating Ansible Controller to Cloud
 
 ![Untitled (2)](https://user-images.githubusercontent.com/105854053/175952763-e6788651-99c9-49a6-af1c-c755deb4b0b0.jpg)
+
+Step 1: Run these commands on AWS Controller
  
+```
+ 
+#!/bin/bash
+
+# update and upgrade
+sudo apt update -y && sudo apt upgrade -y
+sudo apt-get update -y
+
+#install ansible	
+sudo apt-get install software-properties-common
+sudo apt-add-repository ppa:ansible/ansible -y
+sudo apt-get update
+sudo apt-get install ansible -y
+
+#install python and boto3
+sudo apt install python
+sudo apt install python-pip -y
+sudo pip install --upgrade pip
+sudo pip install boto
+sudo pip install boto3
+ 
+```
+Step 2: Navigate to /etc/ansible/ and Create folders group_vars/all and cd group_vars/all and add your aws keys in the vault -> sudo ansible-vault create pass.yml
+
+Step 3: Navigate to cd /etc/ansible and create playbooks 
+ - Playbook to launch app node instance
+ - Playbook to launch database node instance
+ - Ping app and db to check the connection works. 
+ - Playbook to cp existing playbooks used.
+ 
+Step 4: Repeat the same steps you did locally and you should have the app and db running on cloud.
+
 errors
 fatal: [localhost]: FAILED! => {"changed": false, "msg": "Instances with id(s) ['i-0c2154f122e72388c'] were created previously but have since been terminated - use a (possibly different) 'instanceid' parameter"}
 you need to change the instant name in the hosts file as this causes a conflict.  
 
-
+Invalid public key errors 
+ - ensure you have your pem file saved in the right places
+ - ensure your new instances have the correct security group permissions on AWS. 
+ - make sure the chmod permissions are correct.
+ - make sure the key still works.
+ 
+ 
 ## Ansible Server Drift 
 
 Configuration Drift/Server Drift is the phenomenon where running servers in an infrastructure become more and more different as time goes on, due to manual ad-hoc changes and updates, and general entropy.

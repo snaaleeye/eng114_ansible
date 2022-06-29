@@ -103,6 +103,10 @@ https://www.linkedin.com/pulse/understanding-terms-infrastructure-code-managemen
 
 ## Pull Config or Push Config - Which is more suitable for pull and push?
 
+Pull Model - Nodes are dynamically updated with the configurations that are present in the server.
+
+Push Model - Centralised server pushes the configuration on the nodes.
+
 ## How to ssh into different VMs inside a VM
 
 1. Make sure ip used in vagrantfile is compatible with macOS
@@ -327,10 +331,14 @@ Step 6: `ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2`
 Step 7: Get public DNS
 
 Step 8: ssh into EC2 instance
-
+ 
 ## Hybrid Architecture Diagram
 
 ![Untitled (2)](https://user-images.githubusercontent.com/105854053/175952763-e6788651-99c9-49a6-af1c-c755deb4b0b0.jpg)
+ 
+errors
+fatal: [localhost]: FAILED! => {"changed": false, "msg": "Instances with id(s) ['i-0c2154f122e72388c'] were created previously but have since been terminated - use a (possibly different) 'instanceid' parameter"}
+you need to change the instant name in the hosts file as this causes a conflict.  
 
 
 ## Ansible Server Drift 

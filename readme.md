@@ -382,6 +382,8 @@ Invalid public key errors
  - make sure the chmod permissions are correct.
  - make sure the key still works.
  
+ <img width="718" alt="Screenshot 2022-06-30 at 09 43 37" src="https://user-images.githubusercontent.com/105854053/176633871-a8d5db4c-be0d-410c-94fd-83713b9f09e0.png">
+
  
 ## Ansible Server Drift 
 

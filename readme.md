@@ -254,8 +254,11 @@ known_hosts
 cd /etc/ansible/group_vars/all
 sudo nano pass.yml
 sudo ansible-vault create pass.yml
+
 aws_access_key:
+
 aws_secret_key:
+
 cat pass.yml
 
 ## Task to launch ec2 using ansible
@@ -302,8 +305,11 @@ a) Create directory /etc/ansible/group_vars/all
 
 b) Sudo ansible-vault create pass.yml
     - i to go to insert mode
+
 aws_access_key: <ACCESS KEY>
+
 aws_secret_key: <SECRET KEY>
+
 - esc, :wq!
 
 c) sudo cat pass.yml
@@ -319,8 +325,7 @@ b)sudo nano eng114.pem
 
 c) sudo chmod 400 eng114.pem
 
-d) ssh-keygen -t ed25519 -C "@gmail.com"
-
+d) ssh-keygen -t rsa -b 2048 
 
 Step 4: Create ansible playbook launch_ec2.yml
 
